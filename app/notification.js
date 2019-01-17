@@ -30,8 +30,9 @@ if ('serviceWorker' in navigator) {
                     return messaging.getToken();
                 })
                 .then((token) => {
-                    writeUserData(makeid(), getBrowser(), token);
-                    console.log(token);
+                    var now = new Date();
+                    writeUserData(makeid(), getBrowser(), token, now.format("yyyy/MM/dd hh:mm TT"));
+//                    console.log(token);
                     $('body').css({'background': '#2ECC40'});
                     $('h1').text('OK');
                     $('h2').text(token);
@@ -41,15 +42,15 @@ if ('serviceWorker' in navigator) {
                     console.log('ServiceWorker registrationw failed: ', err);
                     $('body').css({'background': '#FF4136'});
                     $('h1').text('Error');
-                    $('h2').text('ServiceWorker registration failed: ' + err);
+                    $('h2').text(err);
                 });
     });
 
-    function writeUserData(id, browser, token) {
+    function writeUserData(id, browser, token, date) {
         firebase.database().ref('users/' + id).set({
             token: token,
             client: browser,
-            created_at: new Date().toDateString()
+            created_at: date
         }, function (error) {
             if (error) {
                 console.log(error);
