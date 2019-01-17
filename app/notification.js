@@ -36,20 +36,6 @@ if ('serviceWorker' in navigator) {
                     $('h1').text('OK');
                     $('h2').text(token);
 
-                    // Simple ajax call to send user token to server for saving
-//      $.ajax({
-//        type: 'POST',
-//        url: '/api/setToken',
-//        dataType: 'json',
-//        data: JSON.stringify({token: token}),
-//        contentType: 'application/json',
-//        success: (data) => {
-//          console.log('Success ', data);
-//        },
-//        error: (err) => {
-//          console.log('Error ', err);
-//        }
-//      });
                 })
                 .catch((err) => {
                     console.log('ServiceWorker registrationw failed: ', err);

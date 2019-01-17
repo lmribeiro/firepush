@@ -18,10 +18,10 @@ self.addEventListener('notificationclick', (event) => {
     var eventURL = event.notification.data;
     console.log(eventURL);
     event.notification.close();
-    if (event.action === 'ok') {
-        clients.openWindow(eventURL.ok);
-    } else {
+    if (event.action === 'cancel') {
         clients.openWindow(eventURL.cancel);
+    } else {
+        clients.openWindow(eventURL.ok);
     }
 }, false);
 
@@ -31,7 +31,7 @@ messaging.setBackgroundMessageHandler((payload) => {
     const notificationTitle = data.title;
     const notificationOptions = {
         body: data.body,
-        icon: 'https://avatars1.githubusercontent.com/u/4492981',
+        icon: 'https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png',
         actions: [
             {action: 'ok', title: '👍 Sim'},
             {action: 'cancel', title: '👎 Não'}
