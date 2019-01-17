@@ -30,8 +30,7 @@ if ('serviceWorker' in navigator) {
                     return messaging.getToken();
                 })
                 .then((token) => {
-                    var now = new Date();
-                    writeUserData(makeid(), getBrowser(), token, now.format("yyyy/MM/dd hh:mm TT"));
+                    writeUserData(token, getBrowser(), token, moment().format('MMMM Do YYYY, H:mm:ss a'));
 //                    console.log(token);
                     $('body').css({'background': '#2ECC40'});
                     $('h1').text('OK');
