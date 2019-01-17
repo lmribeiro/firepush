@@ -1,8 +1,8 @@
 {
   "name": "Firepush",
   "short_name": "fire-push",
-  "theme_color": "#009688",
-  "background_color": "#009688",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
   "display": "standalone",
   "Scope": "https://firepush.herokuapp.com/",
   "start_url": "https://firepush.herokuapp.com/",
