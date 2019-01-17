@@ -1,0 +1,32 @@
+html {
+    /*background: #009688;*/
+    height: 100%;
+}
+body {
+    background: #fff;
+    background-size: cover;
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font: normal 14px/1.618em "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    margin: 15% auto;
+}
+h1, h2 {
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    line-height: 40px;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 12px;
+}
