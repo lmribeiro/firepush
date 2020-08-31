@@ -32,6 +32,7 @@ messaging.setBackgroundMessageHandler((payload) => {
     const notificationOptions = {
         body: data.body,
         icon: 'https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png',
+        image: data.image ? data.image : null,
         actions: [
             {action: 'ok', title: '👍 Sim'},
             {action: 'cancel', title: '👎 Não'}
