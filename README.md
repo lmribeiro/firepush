@@ -1,4 +1,4 @@
-# simple-firebase-notifications
+# simple firebase notifications demo
 
 ### Get Started
 
